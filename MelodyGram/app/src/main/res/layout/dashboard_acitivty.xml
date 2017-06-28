@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/parent_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.melodygram.textview.ArBlancaFont
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/small_margin_size"
+            android:layout_marginTop="@dimen/small_margin_size"
+            android:text="MelodyGram"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/extra_large_text_size" />
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="@drawable/white_attach_bg"
+            android:layout_centerInParent="true"
+            android:textColor="@color/app_color"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="12dp"
+            android:id="@+id/tv_notification_count" />
+
+        <RelativeLayout
+            android:id="@+id/tab_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/app_name"
+            android:layout_marginLeft="@dimen/small_margin_size">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/large_margin_size"
+                android:layout_marginRight="@dimen/large_margin_size"
+                android:fillViewport="false"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@android:color/white"
+                app:tabIndicatorHeight="3dp"
+                app:tabMode="scrollable" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/profile_screen_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/back_button_parent"
+                android:layout_width="@dimen/header_icon_width"
+                android:layout_height="@dimen/header_icon_height"
+                android:layout_alignParentLeft="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/back_button" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/header_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/profile"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/extra_large_text_size"></TextView>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/tab_parent"
+            android:padding="@dimen/small_padding_size"
+            android:src="@drawable/menu_icon"></ImageView>
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:scrollbars="horizontal"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/parent_view" />
+</RelativeLayout>

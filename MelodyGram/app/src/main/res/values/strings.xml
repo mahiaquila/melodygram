@@ -1,0 +1,353 @@
+<resources>
+    <string name="app_name">MelodyGram</string>
+    <string name="google_app_id1">816985527669</string>
+    <string name="google_api_key1">AIzaSyAkWB_-sqzCOu2zzi2i7LyDr-T60NgFgSs</string>
+    <string name="ot_verification">OTP VERIFICATION</string>
+    <string name="enter_mobile_hint">Mobile number</string>
+    <string name="verify">Verify</string>
+    <string name="back_to_login"><u>Back to Login</u></string>
+    <string name="resend_otp"><u>Resend OTP</u></string>
+    <string name="otp">Enter OTP</string>
+    <string name="login">Login</string>
+    <string name="contacts">Contacts</string>
+    <string name="chat">Chats</string>
+    <string name="profile">Profile</string>
+    <string name="title_activity_country">CountryActivity</string>
+    <string name="country">Country</string>
+    <string name="mobile_number_error">Enter mobile number</string>
+    <string name="no_internet_connection">No Internet connection</string>
+    <string name="pic_upload_failed">Failed to upload pic</string>
+    <string name="server_error">Low internet connection</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today </string>
+    <string name="invite">Invite </string>
+    <string name="gallery">Gallery</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="remove_photo">Remove photo</string>
+    <string name="existing">Existing Photo</string>
+    <string name="camera">Camera</string>
+    <string name="share_msg">Check out MelodyGram, The messaging app with background music and disappearing options. Download it now and enjoy your voice communication with background music! <href>https://play.google.com/store/apps/details?id=melodygram.com.melodygram&amp;hl=en</href></string>
+    <string name="app_not_found">App not installed</string>
+    <string name="folder">Folder</string>
+    <string name="parentDirectory">Parent Directory</string>
+    <string name="fileSize">File Size</string>
+    <string name="currentDir">Current Dir</string>
+    <string name="old_profile">Profile Pic</string>
+    <string name="not_valid_otp">OTP not valid</string>
+    <string name="settings">Settings</string>
+    <string name="delete">Delete</string>
+    <string name="locate_top">Locate on Top</string>
+    <string name="search">Search</string>
+    <string name="clear_chat">Clear chat</string>
+    <string name="chat_theme">Chat theme</string>
+    <string name="profile_pic_updated">Profile picture updated successfully</string>
+    <string name="pdf">Doc File</string>
+    <string name="pdf_file">PDF File</string>
+    <string name="zip_file">Zip File</string>
+    <string name="add_music">Say it with music</string>
+    <string name="block">Block</string>
+    <string name="load_earlier_messages">Load earlier messages</string>
+    <string name="typing_text">typing...</string>
+    <string name="new_messages">You have</string>
+    <string name="messages_text">unread messages</string>
+    <string name="one_message_text">unread message</string>
+    <string name="and_you">and You</string>
+    <string name="last_seen_text">Last Online:</string>
+    <string name="at_text">at</string>
+    <string name="online_text">Online</string>
+    <string name="chat_disappear">Chat disappear</string>
+    <string name="disappear">Disappear</string>
+    <string name="send_music">Send</string>
+    <string name="cancel">Cancel</string>
+    <string name="type_here">Type here...</string>
+    <string name="ok">Ok</string>
+    <string name="location">Location</string>
+    <string name="chat_message">Do you really want to clear your messages?</string>
+    <string name="deactivate_message">Do you really want to deactivate your number?</string>
+    <string name="location_share">Do you want to share your Location ?</string>
+    <string name="cant_get_location">Can\'t get your current Location</string>
+    <string name="cant_select_images">Can\'t select more than 10 images</string>
+    <string name="description">Description</string>
+    <string name="title_activity_themes">ThemesActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="set_theme">Set</string>
+    <string name="copied">Copied</string>
+    <string name="notification_settings">Notification Alert</string>
+    <string name="blocked_list">Blocked List</string>
+    <string name="email_settings">Email Chat History</string>
+    <string name="clear_chat_history">Clear Chat History</string>
+    <string name="privacy">Privacy</string>
+    <string name="change_number">Change Number</string>
+    <string name="deactivate_number">Deactivate Number</string>
+    <string name="about">About</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="version_no">Beta Version</string>
+    <string name="year">2016 - 2017</string>
+    <string name="message_notification">Message Notification</string>
+    <string name="sound">Sound</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="failed">Failed</string>
+    <string name="notification_tone">Notification Tone</string>
+    <string name="unblock">UnBlock</string>
+    <string name="unblock_user_to_chat">Unblock your friend to chat</string>
+    <string name="not_blocked">You have not blocked any friend</string>
+    <string name="last_seen">Last Online</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="privacy_message">If you don\'t share your last online, you won\'t be able to see other people\'s last online</string>
+    <string name="everybody">Everybody</string>
+    <string name="nobody">Nobody</string>
+    <string name="status">Status</string>
+    <string name="contact">Contact only</string>
+    <string name="search_contacts">Search Contacts</string>
+    <string name="select_friends">Select Friends</string>
+    <string name="old_number">Old Number</string>
+    <string name="new_number">New Number</string>
+    <string name="enter_old_number">Enter old number</string>
+    <string name="code">Enter OTP</string>
+    <string name="change">Change</string>
+    <string name="new_old_number">Enter new number</string>
+    <string name="file_size_error"><![CDATA[<item name=\"fPlease select file less than or equal to 10MB]]></string>
+    <string name="no_application">No application available to view this file</string>
+    <string name="file_missing">File Missing</string>
+    <string name="download_music_here">You can download music here</string>
+    <string name="music_store">Music Store</string>
+    <string name="your_playlist">Your Playlists</string>
+    <string name="track">Tracks</string>
+    <string name="permission_not_granted">Permission denied</string>
+    <string name="enter_name">Enter name</string>
+    <string name="failed_melody">Failed to create Melody</string>
+    <string name="melody_create">Melody created successfully</string>
+    <string name="creating_melody">Creating your Melody..</string>
+    <string name="global_tracker">UA-76256908-3</string>
+    <string name="privacy_policy"><u>Privacy Policy</u></string>
+
+
+    <string-array name="status_array">
+        <item> Available</item>
+        <item> Busy</item>
+        <item> At School</item>
+        <item> At the movies</item>
+        <item> At work</item>
+        <item> Sleeping</item>
+
+
+    </string-array>
+
+
+
+    <string-array name="CountryCodes" >
+        <item>93,AF</item>
+        <item>355,AL</item>
+        <item>213,DZ</item>
+        <item>376,AD</item>
+        <item>244,AO</item>
+        <item>672,AQ</item>
+        <item>54,AR</item>
+        <item>374,AM</item>
+        <item>297,AW</item>
+        <item>61,AU</item>
+        <item>43,AT</item>
+        <item>994,AZ</item>
+        <item>973,BH</item>
+        <item>880,BD</item>
+        <item>375,BY</item>
+        <item>32,BE</item>
+        <item>501,BZ</item>
+        <item>229,BJ</item>
+        <item>975,BT</item>
+        <item>591,BO</item>
+        <item>387,BA</item>
+        <item>267,BW</item>
+        <item>55,BR</item>
+        <item>673,BN</item>
+        <item>359,BG</item>
+        <item>226,BF</item>
+        <item>95,MM</item>
+        <item>257,BI</item>
+        <item>855,KH</item>
+        <item>237,CM</item>
+        <item>1,CA</item>
+        <item>238,CV</item>
+        <item>236,CF</item>
+        <item>235,TD</item>
+        <item>56,CL</item>
+        <item>86,CN</item>
+        <item>61,CX</item>
+        <item>61,CC</item>
+        <item>57,CO</item>
+        <item>269,KM</item>
+        <item>242,CG</item>
+        <item>243,CD</item>
+        <item>682,CK</item>
+        <item>506,CR</item>
+        <item>385,HR</item>
+        <item>53,CU</item>
+        <item>357,CY</item>
+        <item>420,CZ</item>
+        <item>45,DK</item>
+        <item>253,DJ</item>
+        <item>670,TL</item>
+        <item>593,EC</item>
+        <item>20,EG</item>
+        <item>503,SV</item>
+        <item>240,GQ</item>
+        <item>291,ER</item>
+        <item>372,EE</item>
+        <item>251,ET</item>
+        <item>500,FK</item>
+        <item>298,FO</item>
+        <item>679,FJ</item>
+        <item>358,FI</item>
+        <item>33,FR</item>
+        <item>689,PF</item>
+        <item>241,GA</item>
+        <item>220,GM</item>
+        <item>995,GE</item>
+        <item>49,DE</item>
+        <item>233,GH</item>
+        <item>350,GI</item>
+        <item>30,GR</item>
+        <item>299,GL</item>
+        <item>502,GT</item>
+        <item>224,GN</item>
+        <item>245,GW</item>
+        <item>592,GY</item>
+        <item>509,HT</item>
+        <item>504,HN</item>
+        <item>852,HK</item>
+        <item>36,HU</item>
+        <item>91,IN</item>
+        <item>62,ID</item>
+        <item>98,IR</item>
+        <item>964,IQ</item>
+        <item>353,IE</item>
+        <item>44,IM</item>
+        <item>972,IL</item>
+        <item>39,IT</item>
+        <item>225,CI</item>
+        <item>81,JP</item>
+        <item>962,JO</item>
+        <item>7,KZ</item>
+        <item>254,KE</item>
+        <item>686,KI</item>
+        <item>965,KW</item>
+        <item>996,KG</item>
+        <item>856,LA</item>
+        <item>371,LV</item>
+        <item>961,LB</item>
+        <item>266,LS</item>
+        <item>231,LR</item>
+        <item>218,LY</item>
+        <item>423,LI</item>
+        <item>370,LT</item>
+        <item>352,LU</item>
+        <item>853,MO</item>
+        <item>389,MK</item>
+        <item>261,MG</item>
+        <item>265,MW</item>
+        <item>60,MY</item>
+        <item>960,MV</item>
+        <item>223,ML</item>
+        <item>356,MT</item>
+        <item>692,MH</item>
+        <item>222,MR</item>
+        <item>230,MU</item>
+        <item>262,YT</item>
+        <item>52,MX</item>
+        <item>691,FM</item>
+        <item>373,MD</item>
+        <item>377,MC</item>
+        <item>976,MN</item>
+        <item>382,ME</item>
+        <item>212,MA</item>
+        <item>258,MZ</item>
+        <item>264,NA</item>
+        <item>674,NR</item>
+        <item>977,NP</item>
+        <item>31,NL</item>
+        <item>599,AN</item>
+        <item>687,NC</item>
+        <item>64,NZ</item>
+        <item>505,NI</item>
+        <item>227,NE</item>
+        <item>234,NG</item>
+        <item>683,NU</item>
+        <item>850,KP</item>
+        <item>47,NO</item>
+        <item>968,OM</item>
+        <item>92,PK</item>
+        <item>680,PW</item>
+        <item>507,PA</item>
+        <item>675,PG</item>
+        <item>595,PY</item>
+        <item>51,PE</item>
+        <item>63,PH</item>
+        <item>870,PN</item>
+        <item>48,PL</item>
+        <item>351,PT</item>
+        <item>1,PR</item>
+        <item>974,QA</item>
+        <item>40,RO</item>
+        <item>7,RU</item>
+        <item>250,RW</item>
+        <item>590,BL</item>
+        <item>685,WS</item>
+        <item>378,SM</item>
+        <item>239,ST</item>
+        <item>966,SA</item>
+        <item>221,SN</item>
+        <item>381,RS</item>
+        <item>248,SC</item>
+        <item>232,SL</item>
+        <item>65,SG</item>
+        <item>421,SK</item>
+        <item>386,SI</item>
+        <item>677,SB</item>
+        <item>252,SO</item>
+        <item>27,ZA</item>
+        <item>82,KR</item>
+        <item>34,ES</item>
+        <item>94,LK</item>
+        <item>290,SH</item>
+        <item>508,PM</item>
+        <item>249,SD</item>
+        <item>597,SR</item>
+        <item>268,SZ</item>
+        <item>46,SE</item>
+        <item>41,CH</item>
+        <item>963,SY</item>
+        <item>886,TW</item>
+        <item>992,TJ</item>
+        <item>255,TZ</item>
+        <item>66,TH</item>
+        <item>228,TG</item>
+        <item>690,TK</item>
+        <item>676,TO</item>
+        <item>216,TN</item>
+        <item>90,TR</item>
+        <item>993,TM</item>
+        <item>688,TV</item>
+        <item>971,AE</item>
+        <item>256,UG</item>
+        <item>44,GB</item>
+        <item>380,UA</item>
+        <item>598,UY</item>
+        <item>1,US</item>
+        <item>998,UZ</item>
+        <item>678,VU</item>
+        <item>39,VA</item>
+        <item>58,VE</item>
+        <item>84,VN</item>
+        <item>681,WF</item>
+        <item>967,YE</item>
+        <item>260,ZM</item>
+        <item>263,ZW</item>
+    </string-array>
+    <string name="permission_rationale">"Storage permission is needed for fetching images from Gallery."</string>
+
+    <!-- Content descriptions -->
+    <string name="descr_image">Image</string>
+</resources>
+

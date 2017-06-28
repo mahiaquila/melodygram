@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_padding_size">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_playlist"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/large_text_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/small_padding_size"
+        android:layout_marginRight="@dimen/small_padding_size"
+        android:background="@color/light_app_color" />
+
+    <ListView
+        android:id="@+id/cat_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/small_margin_size"
+        android:layout_marginRight="@dimen/small_margin_size"
+        android:divider="@color/light_app_color"
+        android:dividerHeight="1dp"></ListView>
+
+
+</LinearLayout>

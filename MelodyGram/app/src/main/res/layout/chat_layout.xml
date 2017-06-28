@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat_default_bg"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/chat_header_layout" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/chat_search_parent"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/rl_chat_search_button"
+        android:background="@drawable/search_bg"
+        >
+        <com.melodygram.view.CustomEditText
+            android:id="@+id/chat_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableRight="@drawable/search_icon"
+            android:padding="5dp"
+            android:layout_marginRight="@dimen/extra_small_margin_size"
+            android:hint="@string/search"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/medium_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_chat_search_button"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_height="30dp">
+        <ImageView
+            android:id="@+id/chat_search_button"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_icon" />
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:paddingBottom="10dp"
+        android:scrollbars="none"
+        android:transcriptMode="normal" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/img_bg"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <LinearLayout
+                android:id="@+id/attach_parent"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.8"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/attach_icon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/attachment_icon" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="4.8"
+                android:background="@drawable/edit_parrent_bg"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp">
+
+                <ImageView
+                    android:id="@+id/emojicon_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignBottom="@+id/dummy_view_left"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/dummy_view_left"
+                    android:layout_marginLeft="@dimen/extra_small_margin_size"
+                    android:src="@drawable/smiley_icon" />
+
+                <View
+                    android:id="@+id/dummy_view_left"
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/extra_small_margin_size"
+                    android:layout_marginRight="@dimen/extra_small_margin_size"
+                    android:layout_toRightOf="@+id/emojicon_button"
+                    android:background="@color/app_color" />
+
+                <com.melodygram.emojicon.EmojiconEditText
+                    android:id="@+id/user_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/dummy_view_right"
+                    android:layout_toRightOf="@+id/dummy_view_left"
+                    android:background="@android:color/transparent"
+                    android:maxLines="4"
+                    android:hint="@string/type_here"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical" />
+
+                <View
+                    android:id="@+id/dummy_view_right"
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/extra_small_margin_size"
+                    android:layout_marginRight="@dimen/extra_small_margin_size"
+                    android:layout_toLeftOf="@+id/location_icon"
+                    android:background="@color/app_color" />
+
+                <ImageView
+                    android:id="@+id/location_icon"
+                    android:layout_width="15dp"
+                    android:layout_height="12dp"
+                    android:layout_alignBottom="@+id/dummy_view_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/dummy_view_right"
+                    android:layout_marginRight="@dimen/extra_small_margin_size"
+                    android:src="@drawable/location_icon" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.8"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/voice_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/voice_icon" />
+
+                <ImageView
+                    android:id="@+id/send_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/send_icon"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/user_block_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/app_color"
+            android:paddingBottom="5dp"
+            android:visibility="gone"
+            android:paddingTop="5dp"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/unblock_user_to_chat"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/keyboard_height"
+        android:visibility="gone" />
+
+</LinearLayout>

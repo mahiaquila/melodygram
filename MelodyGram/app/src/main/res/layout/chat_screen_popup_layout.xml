@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pop_up_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/pop_up_margin">
+
+        <LinearLayout
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/small_margin_size"
+            android:layout_marginTop="@dimen/small_margin_size"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/search_icon_small"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/small_margin_size"
+                android:text="@string/search"
+                android:textColor="@android:color/white"></TextView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_marginLeft="@dimen/extra_small_margin_size"
+            android:layout_marginRight="@dimen/extra_small_margin_size"
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:id="@+id/clear_chat_button"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/small_margin_size"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/clear_chat_icon"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/small_margin_size"
+                android:text="@string/clear_chat"
+                android:textColor="@android:color/white"></TextView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_marginLeft="@dimen/extra_small_margin_size"
+            android:layout_marginRight="@dimen/extra_small_margin_size"
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:id="@+id/chat_theme_button"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/small_margin_size"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/chat_theme_icon"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/small_margin_size"
+                android:text="@string/chat_theme"
+                android:textColor="@android:color/white"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

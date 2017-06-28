@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/moreChatCountryItemParentId"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp" >
+
+    <TextView
+        android:id="@+id/countryTextId"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/countrySelectedIconId"
+        android:singleLine="true"
+        android:text="@string/country"
+        android:textSize="@dimen/medium_text_size" />
+
+    <ImageView
+        android:id="@+id/countrySelectedIconId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+
+        android:visibility="gone" />
+
+</RelativeLayout>

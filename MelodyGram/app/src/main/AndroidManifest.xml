@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.melodygram">
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="myapp.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="com.melodygram.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.melodygram.gcm.permission.C2D_MESSAGE" />
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <application
+        android:name=".singleton.AppController"
+
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.CountryActivity"
+            android:label="@string/title_activity_country"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.OTPVerification"
+            android:screenOrientation="portrait"
+           />
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+
+          />
+
+        <activity
+            android:name=".activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|screenLayout"
+           />
+        <activity
+            android:name=".activity.ChooseFolderActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OtherUserProfileActivity"
+            android:screenOrientation="portrait"
+          />
+        <activity
+            android:name=".activity.PicViewerActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <service android:name=".services.FwdIntentService" />
+
+        <service android:name=".services.AppUpdateIntentService" />
+        <service
+            android:name=".services.ContactUpdateSyncService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".activity.ThemesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_themes"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BlockActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NotificationSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PrivacyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FwdMultipleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangeNumberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FileChooser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MusicFragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MusicStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PrivacyPolicyActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <service
+            android:name="com.melodygram.services.GcmIntentService"
+            android:enabled="true" />
+        <service
+            android:name="com.melodygram.services.NotificationMessageUpdate"
+            />
+        <service android:name="com.melodygram.services.UpdateMusicServices"></service>
+
+        <receiver
+            android:name="com.melodygram.broadcastReceivers.GcmBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.melodygram.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.melodygram.broadcastReceivers.NetworkBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key1" />
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="b339efd3d17e05d129408bf6a265d3e3daa5b7a6"
+            />
+
+        <uses-library android:name="com.google.android.maps"
+            android:required="false"/>
+
+        <!--<activity android:name="eu.janmuller.android.simplecropimage.CropImage" />-->
+
+        <!--<provider-->
+            <!--android:name="com.melodygram.view.InternalStorageContentProvider"-->
+            <!--android:authorities="com.melodygram.view"-->
+            <!--android:exported="true" />-->
+        <activity android:name=".activity.MediaAutoDownload"/>
+        <activity android:name=".activity.MultiPhotoSelectActivity"
+
+            ></activity>
+        <activity android:name=".activity.CustomPhotoGalleryActivity"></activity>
+    </application>
+
+</manifest>

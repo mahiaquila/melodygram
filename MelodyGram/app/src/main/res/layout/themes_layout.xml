@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/theme_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/chat_default_bg"/>
+
+    <Button
+        android:id="@+id/set_theme_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/set_theme"
+        android:textColor="@android:color/white"
+        android:background="@color/semi_transparent_gray"
+        android:textSize="@dimen/large_text_size"
+        android:layout_gravity="center_horizontal|bottom" />
+
+</FrameLayout>

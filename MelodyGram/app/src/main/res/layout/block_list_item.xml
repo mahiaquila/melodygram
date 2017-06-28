@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/user_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/small_margin_size"
+        android:layout_marginLeft="@dimen/small_margin_size"
+        android:layout_marginTop="@dimen/small_margin_size"
+        android:clickable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_profile_pic"
+        app:civ_border_color="@color/pic_border_color"
+        app:civ_border_width="1dp" />
+
+    <com.melodygram.emojicon.EmojiconTextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/small_margin_size"
+        android:textColor="@color/app_color"
+        android:layout_marginRight="@dimen/small_margin_size"
+        android:layout_toLeftOf="@+id/block_icon"
+        android:layout_toRightOf="@+id/user_pic" />
+
+    <ImageView
+        android:id="@+id/block_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/unlock" />
+</RelativeLayout>

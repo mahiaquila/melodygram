@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/appUserPic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin_size"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile_pic"
+            app:civ_border_color="@color/pic_border_color"
+            app:civ_border_width="1dp" />
+
+        <com.melodygram.emojicon.EmojiconTextView
+            android:id="@+id/appUserName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/extra_small_margin_size"
+            android:layout_toLeftOf="@+id/selection_parent"
+            android:layout_toRightOf="@+id/appUserPic"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Contact Name" />
+
+        <RelativeLayout
+            android:id="@+id/selection_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/uncheckedIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+              android:src="@drawable/radio_button_selected" />
+
+            <ImageView
+                android:id="@+id/uncheckedIconUnselected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/radio_button_unselected" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

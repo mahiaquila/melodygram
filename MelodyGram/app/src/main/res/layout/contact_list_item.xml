@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:id="@+id/appUserDataParrentId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/appUserProfileParrentId"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp">
+
+
+            <RelativeLayout
+                android:id="@+id/appUserProfilePicParrentId"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:padding="9dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/contactPicId"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_profile_pic" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_toRightOf="@+id/appUserProfilePicParrentId">
+
+                <RelativeLayout
+                    android:id="@+id/appUserProfileDetailsParrentId"
+                    android:layout_width="match_parent"
+                    android:layout_height="79dp"
+                    android:layout_alignParentBottom="true"
+
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/appUserProfileDetailsId"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.melodygram.emojicon.EmojiconTextView
+                            android:id="@+id/appUserNameId"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:inputType="textPersonName|textCapWords"
+                            android:singleLine="true"
+                            android:text="Contact Name"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/medium_text_size" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/appUserProfileDetailsId"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/contactNumberId"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:singleLine="true"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/medium_text_size" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+           <RelativeLayout
+                android:id="@+id/overlay_parent"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white_overlay">
+
+                <TextView
+                    android:id="@+id/overlay_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/small_margin_size"
+                    android:text="A"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

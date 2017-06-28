@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/countryHeaderParrentId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/header_back_button_parent"
+            android:layout_width="@dimen/header_icon_width"
+            android:layout_height="@dimen/header_icon_height"
+            android:layout_alignParentLeft="true"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_button" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/settings_button"
+            android:layout_toRightOf="@+id/header_back_button_parent"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/header_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select your new status"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"></TextView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/image_selection_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/small_margin_size"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/add_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="@dimen/medium_margin_size"
+                android:src="@drawable/add_image_icon" />
+
+            <ImageView
+                android:id="@+id/done_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/image_selection_icon" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@id/settings_button"
+            android:layout_width="@dimen/header_icon_width"
+            android:layout_height="@dimen/header_icon_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/settings_button_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/settings_icon" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.melodygram.view.SideBarView
+        android:id="@+id/letterSideBarViewId"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/countryHeaderParrentId"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/listViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countryHeaderParrentId"
+        android:layout_toLeftOf="@id/letterSideBarViewId"
+        android:divider="@color/app_color"
+        android:dividerHeight="0.5dp"
+        android:overScrollMode="never"></ListView>
+
+</RelativeLayout>

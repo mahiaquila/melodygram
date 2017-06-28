@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F5A5AA</color>
+    <color name="colorPrimaryDark">#f46d73</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="app_color">#F14A52</color>
+    <color name="pic_border_color">#777A7A</color>
+    <color name="light_app_color">#F5A5AA</color>
+    <color name="other_user_msg_bg">#F8E3CE</color>
+    <color name="app_user_msg_bg">#F9A4A9</color>
+    <color name="chat_user_pic_border">#D6D7D7</color>
+    <color name="semi_transparent_gray">#80000000</color>
+    <color name="white_overlay">#90ffffff</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="grey_color">#777A7A</color>
+    <color  name="black">#000000
+    </color>
+    <color name="light_chat_color">#d3b9b9</color>
+    <color name="soft_shell_pink">#F4C2C2</color>
+    <color name="transparent">#D8000000</color>
+</resources>

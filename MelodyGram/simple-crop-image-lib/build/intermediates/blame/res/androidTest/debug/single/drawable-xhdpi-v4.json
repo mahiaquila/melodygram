@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_rotate_left.png",
+        "source": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_rotate_left.png"
+    },
+    {
+        "merged": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_rotate_right.png",
+        "source": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_rotate_right.png"
+    },
+    {
+        "merged": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camera_crop_height.png",
+        "source": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\camera_crop_height.png"
+    },
+    {
+        "merged": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\btn_crop_pressed.9.png",
+        "source": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\btn_crop_pressed.9.png"
+    },
+    {
+        "merged": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_autocrop.png",
+        "source": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_autocrop.png"
+    },
+    {
+        "merged": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\camera_crop_width.png",
+        "source": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\camera_crop_width.png"
+    },
+    {
+        "merged": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\btn_crop_operator.9.png",
+        "source": "D:\\Mahendran\\Android\\MelodyGram_Work_space\\MelodyGram\\MelodyGram\\simple-crop-image-lib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\btn_crop_operator.9.png"
+    }
+]

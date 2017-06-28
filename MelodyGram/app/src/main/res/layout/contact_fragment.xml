@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+    <RelativeLayout
+        android:id="@+id/contacts_search_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:visibility="invisible"
+        android:layout_toLeftOf="@+id/contacts_search_button"
+        android:background="@drawable/search_bg"
+      >
+        <com.melodygram.view.CustomEditText
+            android:id="@+id/contacts_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:drawableRight="@drawable/search_icon"
+            android:hint="@string/search"
+            android:padding="5dp"
+            android:textSize="@dimen/medium_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/contacts_search_button"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/extra_small_margin_size"
+        android:src="@drawable/search_icon" />
+    <com.melodygram.view.SideBarView
+        android:id="@+id/letterSideBarViewId"
+        android:layout_width="40dp"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/contacts_search_parent" />
+    <ListView
+        android:id="@+id/contact_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contacts_search_parent"
+        android:layout_toLeftOf="@+id/letterSideBarViewId"
+        android:clickable="true"
+        android:dividerHeight="0.5dp"
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
+
+    <ProgressBar
+        android:id="@+id/contacts_progressbar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+
+
+</RelativeLayout>
+    </LinearLayout>

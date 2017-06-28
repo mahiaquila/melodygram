@@ -1,0 +1,43 @@
+{
+  "project_info": {
+    "project_number": "931965108213",
+    "project_id": "firebase-melodygram"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931965108213:android:4bf0ee90db6b2103",
+        "android_client_info": {
+          "package_name": "melodygram.com.melodygram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931965108213-u3hoe9ber4fe5f7lhqr8ll0gtbilu2ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPuvajqQBvN1Dgx2bKFGfSiaLB3HoGvS0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-93003247-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

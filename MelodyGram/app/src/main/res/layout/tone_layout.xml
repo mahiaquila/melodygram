@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/small_padding_size"
+    android:paddingTop="@dimen/small_padding_size">
+
+    <TextView
+        android:id="@+id/tone_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/small_margin_size"
+
+        android:inputType="textCapSentences"
+        android:maxLines="2"
+        android:layout_toLeftOf="@+id/radio_button"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/large_text_size"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:id="@+id/radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/custom_radio_button"
+        android:button="@android:color/transparent"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/small_margin_size" />
+
+</RelativeLayout>

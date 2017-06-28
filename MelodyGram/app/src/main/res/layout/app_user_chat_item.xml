@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:descendantFocusability="blocksDescendants">
+    <LinearLayout
+        android:id="@+id/chat_list_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/extra_small_margin_size"
+            android:layout_marginLeft="@dimen/extra_small_margin_size"
+            android:layout_marginTop="@dimen/extra_small_margin_size">
+
+            <TextView
+                android:id="@+id/app_user_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:text="08:30AM"
+                android:textColor="@color/app_user_msg_bg"
+                android:textSize="@dimen/medium_text_size"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/app_user_text_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+               >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-20dp"
+                    android:layout_toLeftOf="@+id/app_user_text_image"
+                    android:background="@drawable/app_user_rounded_corner"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp">
+
+                        <com.melodygram.emojicon.EmojiconTextView
+                            android:id="@+id/app_user_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="2dp"
+                            android:autoLink="web"
+                            android:linksClickable="true"
+                            android:longClickable="false"
+                            android:maxWidth="@dimen/pic_max_width"
+                            android:minWidth="100dp"
+                            android:text="If you want to add rounded corner to any kind of android view like linear layout, relative layout, button etc., follow the below method"
+                            android:textColor="@android:color/black"
+                           />
+
+                        <ImageView
+                            android:id="@+id/iv_edit"
+                            android:layout_toRightOf="@+id/app_user_text"
+                            android:layout_width="10dp"
+                            android:visibility="invisible"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_msg_icon"
+                            android:layout_height="10dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/app_user_text"
+                            android:layout_below="@+id/app_user_text"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/app_user_text_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="10:00 AM"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/small_text_size" />
+
+                            <ImageView
+                                android:id="@+id/app_user_text_tick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/app_user_text"
+                                android:layout_gravity="center_vertical"
+                                android:layout_toLeftOf="@+id/app_user_text_time"
+                                android:paddingLeft="@dimen/small_padding_size"
+                                android:src="@drawable/single_tick" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/app_user_text_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="-20dp"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_profile_pic"
+                    app:civ_border_color="@color/chat_user_pic_border"
+                    app:civ_border_width="1dp" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/app_user_pic_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+
+          >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/app_user_pic_image"
+                android:background="@drawable/app_user_rounded_corner">
+                <RelativeLayout
+                    android:layout_width="@dimen/chat_pic_width"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_rounded_corner">
+
+                    <ImageView
+                        android:id="@+id/app_user_image"
+                        android:layout_width="@dimen/chat_pic_width"
+                        android:layout_height="@dimen/chat_pic_height"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerCrop" />
+
+                    <ProgressBar
+                        android:id="@+id/app_user_image_progress"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/app_user_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/app_user_image"
+                        android:layout_toStartOf="@+id/time_parent"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/time_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/app_user_image"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/app_user_pic_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="10:00 AM"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <ImageView
+                            android:id="@+id/app_user_pic_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_toLeftOf="@+id/app_user_pic_time"
+                            android:paddingLeft="@dimen/small_padding_size"
+                            android:src="@drawable/single_tick" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/app_user_pic_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="-20dp"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_profile_pic"
+                app:civ_border_color="@color/chat_user_pic_border"
+                app:civ_border_width="1dp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/app_user_sticker_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/app_user_sticker_image">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/app_sticker_image"
+                        android:layout_width="@dimen/sticker_height_width"
+                        android:layout_height="@dimen/sticker_height_width"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+
+                        android:longClickable="false" />
+
+                    <ProgressBar
+                        android:id="@+id/app_user_sticker_progress"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/app_sticker_image"
+                        android:layout_marginRight="@dimen/extra_small_margin_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/app_user_sticker_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="10:00 AM"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <ImageView
+                            android:id="@+id/app_user_sticker_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_toLeftOf="@+id/app_user_sticker_time"
+                            android:paddingLeft="@dimen/small_padding_size"
+                            android:src="@drawable/single_tick" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/app_user_sticker_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="-20dp"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_profile_pic"
+                app:civ_border_color="@color/chat_user_pic_border"
+                app:civ_border_width="1dp"
+
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/app_user_music_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:longClickable="false"
+            android:visibility="gone"
+         >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-20dp"
+                android:layout_toLeftOf="@+id/app_user_music_image"
+                android:background="@drawable/app_user_rounded_corner"
+                android:padding="@dimen/very_small_padding_size">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp">
+                    <RelativeLayout
+                        android:id="@+id/app_user_music"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/very_small_margin_size"
+                        android:minWidth="200dp">
+
+                        <RelativeLayout
+                            android:id="@+id/app_user_music_play_stop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/app_user_play_button"
+                                android:layout_width="@dimen/play_button_width"
+                                android:layout_height="@dimen/play_button_width"
+                                android:src="@drawable/sender_play" />
+
+                            <ImageView
+                                android:id="@+id/app_user_stop_button"
+                                android:layout_width="@dimen/play_button_width"
+                                android:layout_height="@dimen/play_button_width"
+                                android:src="@drawable/sender_stop"
+                                android:visibility="gone" />
+                            <ImageView
+                                android:id="@+id/app_user_upload_button"
+                                android:layout_width="@dimen/play_button_width"
+                                android:layout_height="@dimen/play_button_width"
+                                android:visibility="gone"
+                                android:src="@drawable/ic_upload_offline" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/app_user_progress_bar_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/app_user_progress_bar_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="0%"
+                                android:textColor="@color/app_color"
+                                android:textSize="8sp" />
+
+                            <ProgressBar
+                                android:id="@+id/app_user_sender_progress"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/app_user_music_duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_user_music_play_stop"
+                            android:layout_marginLeft="@dimen/extra_small_margin_size"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/very_small_text_size" />
+
+                        <ImageView
+                            android:id="@+id/app_user_music_wave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/app_user_music_duration"
+                            android:layout_alignStart="@+id/app_user_music_seekBar"
+
+                            android:layout_marginLeft="@dimen/medium_margin_size"
+                            android:layout_marginStart="7dp"
+                            android:src="@drawable/sender_music_wave" />
+
+                        <SeekBar
+                            android:id="@+id/app_user_music_seekBar"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/small_margin_size"
+                            android:layout_marginTop="@dimen/small_margin_size"
+                            android:padding="3dp"
+                            android:layout_toRightOf="@+id/app_user_music_play_stop"
+                            android:enabled="false"
+                            android:progressDrawable="@drawable/sender_seek_progress"
+                            android:thumb="@drawable/sender_seek_control" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/app_user_music"
+                        android:layout_below="@+id/app_user_music"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/app_user_music_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="10:00 AM"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+
+
+                        <ImageView
+                            android:id="@+id/app_user_music_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_user_text"
+                            android:layout_gravity="center_vertical"
+                            android:layout_toLeftOf="@+id/app_user_text_time"
+                            android:paddingLeft="@dimen/small_padding_size"
+                            android:src="@drawable/single_tick" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/app_user_music_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="-20dp"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_profile_pic"
+                app:civ_border_color="@color/chat_user_pic_border"
+                app:civ_border_width="1dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/app_user_file_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-20dp"
+                android:layout_toLeftOf="@+id/app_user_file_image"
+                android:background="@drawable/app_user_rounded_corner"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp">
+
+
+                    <ImageView
+                        android:id="@+id/app_user_doc_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/extra_small_margin_size"
+                        android:layout_marginTop="@dimen/extra_small_margin_size" />
+
+
+                    <TextView
+                        android:id="@+id/app_user_file_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/extra_small_margin_size"
+                        android:layout_marginTop="@dimen/extra_small_margin_size"
+                        android:layout_toRightOf="@+id/app_user_doc_image"
+                        android:linksClickable="true"
+                        android:longClickable="false"
+                        android:maxWidth="@dimen/pic_max_width"
+                        android:minHeight="30dp"
+                        android:minWidth="100dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/chating_text_size" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/app_user_file_progress_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/extra_small_margin_size"
+                        android:layout_toRightOf="@+id/app_user_file_text">
+
+
+                        <ProgressBar
+                            android:id="@+id/app_user_file_progressbar"
+                            android:layout_width="52dip"
+                            android:layout_height="52dip"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <TextView
+                            android:id="@+id/app_user_percentage_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:singleLine="true"
+                            android:text="0%"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/app_user_file_text"
+                        android:layout_below="@+id/app_user_file_text"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/app_user_file_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="10:00 AM"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <ImageView
+                            android:id="@+id/app_user_file_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_user_text"
+                            android:layout_gravity="center_vertical"
+                            android:layout_toLeftOf="@+id/app_user_text_time"
+                            android:paddingLeft="@dimen/small_padding_size"
+                            android:src="@drawable/single_tick" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/app_user_file_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="-20dp"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_profile_pic"
+                app:civ_border_color="@color/chat_user_pic_border"
+                app:civ_border_width="1dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+    android:id="@+id/chat_item_parent"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/semi_transparent_gray"
+    android:visibility="gone"
+    >
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:id="@+id/chat_list_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/other_user_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:text="08:30AM"
+                android:textColor="@color/app_user_msg_bg"
+                android:textSize="@dimen/medium_text_size"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/other_user_text_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+               >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="-20dp"
+                    android:layout_toRightOf="@+id/other_user_text_profile_image"
+                    android:background="@drawable/other_user_rounded_corner"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:id="@+id/relativeLayout">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+                            android:id="@+id/chatGroupMemberNameId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+
+
+                        <com.melodygram.emojicon.EmojiconTextView
+                            android:id="@+id/other_user_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_below="@+id/chatGroupMemberNameId"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="2dp"
+                            android:paddingRight="10dp"
+                            android:layout_marginRight="10dp"
+                            android:autoLink="web"
+                            android:linksClickable="true"
+                            android:longClickable="false"
+                            android:maxWidth="@dimen/pic_max_width"
+                            android:minWidth="100dp"
+                            android:text="hiiii"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/chating_text_size" />
+
+                        <TextView
+                            android:id="@+id/other_user_text_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/other_user_text"
+                            android:layout_below="@+id/other_user_text"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:text="10:00 AM"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/other_user_text_profile_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="-20dp"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_profile_pic"
+                    app:civ_border_color="@color/chat_user_pic_border"
+                    app:civ_border_width="1dp" />
+
+                <ImageView
+                    android:id="@+id/iv_receiver_edit"
+                    android:layout_width="10dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/edit_msg_icon"
+                    android:paddingRight="5dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignEnd="@+id/relativeLayout" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/other_user_pic_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                 android:visibility="gone"
+              >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/other_user_pic_profile_image"
+                    android:background="@drawable/other_user_rounded_corner">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/chat_pic_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_rounded_corner">
+
+                        <TextView
+                            android:id="@+id/other_user_pic_group_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/other_user_image"
+                            android:layout_width="@dimen/chat_pic_width"
+                            android:layout_height="@dimen/chat_pic_height"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:longClickable="true"
+                            android:scaleType="centerCrop" />
+                        <RelativeLayout
+                            android:id="@+id/rl_tranparent_img"
+                            android:layout_width="@dimen/chat_pic_width"
+                            android:layout_height="@dimen/chat_pic_height"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                             android:visibility="gone"
+                            android:background="@color/transparent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/other_user_image_download"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:background="@drawable/download_music"
+                            />
+                        <ProgressBar
+                            android:id="@+id/other_user_image_progress"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/other_user_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/other_user_image"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toStartOf="@+id/other_user_pic_time"
+                            android:paddingBottom="5dp"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/other_user_pic_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/other_user_image"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:singleLine="true"
+                            android:text="10:00 AM"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/other_user_pic_profile_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="-30dp"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_profile_pic"
+                    app:civ_border_color="@color/chat_user_pic_border"
+                    app:civ_border_width="1dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/other_user_sticker_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/other_user_sticker_profile_image">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/sticker_height_width"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/other_user_sticker_group_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <ImageView
+                            android:id="@+id/other_user_sticker"
+                            android:layout_width="@dimen/sticker_height_width"
+                            android:layout_height="@dimen/sticker_height_width"
+                            android:layout_below="@+id/other_user_sticker_group_name"
+                            android:layout_centerVertical="true"
+                            android:linksClickable="true"
+                            android:longClickable="false"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/chating_text_size" />
+
+                        <ProgressBar
+                            android:id="@+id/other_user_sticker_progress"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/other_user_sticker_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/other_user_sticker"
+                            android:singleLine="true"
+                            android:text="10:00 AM"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/other_user_sticker_profile_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="-20dp"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_profile_pic"
+                    app:civ_border_color="@color/chat_user_pic_border"
+                    app:civ_border_width="1dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/other_user_music_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+              >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="-20dp"
+                    android:layout_toRightOf="@+id/other_user_music_profile_image"
+                    android:background="@drawable/other_user_rounded_corner"
+                    android:padding="@dimen/very_small_padding_size">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/app_user_music"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/very_small_margin_size"
+                            android:minWidth="200dp">
+
+                            <RelativeLayout
+                                android:id="@+id/other_user_music_play_stop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/other_user_play_button"
+                                    android:layout_width="@dimen/play_button_width"
+                                    android:layout_height="@dimen/play_button_width"
+                                    android:src="@drawable/receiver_play" />
+                                <ImageView
+                                    android:id="@+id/other_user_download__music_button"
+                                    android:layout_width="@dimen/play_button_width"
+                                    android:layout_height="@dimen/play_button_width"
+                                    android:visibility="gone"
+                                    android:src="@drawable/download_music" />
+                                <ImageView
+                                    android:id="@+id/other_user_stop_button"
+                                    android:layout_width="@dimen/play_button_width"
+                                    android:layout_height="@dimen/play_button_width"
+                                    android:src="@drawable/receiver_stop"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/other_user_progress_bar_parent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/other_user_progress_bar_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="0%"
+                                    android:textColor="@color/light_app_color"
+                                    android:textSize="8sp" />
+
+                                <ProgressBar
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/other_user_music_duration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/other_user_music_play_stop"
+                                android:layout_marginLeft="@dimen/extra_small_margin_size"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/very_small_text_size" />
+
+                            <ImageView
+                                android:id="@+id/other_user_music_wave"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/app_user_music_duration"
+                                android:layout_alignStart="@+id/other_user_music_seekBar"
+                                android:layout_marginLeft="@dimen/medium_margin_size"
+                                android:layout_marginStart="7dp"
+                                android:src="@drawable/sender_music_wave" />
+
+                            <SeekBar
+                                android:id="@+id/other_user_music_seekBar"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/small_margin_size"
+                                android:layout_marginTop="@dimen/small_margin_size"
+                                android:enabled="false"
+                                android:padding="3dp"
+                                android:thumb="@drawable/sender_seek_control"
+                                android:progressDrawable="@drawable/receiver_seek_progress"
+                                android:layout_toRightOf="@+id/other_user_music_play_stop"
+                                />
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/other_user_music_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/app_user_music"
+                            android:layout_below="@+id/app_user_music"
+                            android:layout_marginBottom="@dimen/very_small_margin_size"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:text="10:00 AM"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/other_user_music_profile_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="-20dp"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_profile_pic"
+                    app:civ_border_color="@color/chat_user_pic_border"
+                    app:civ_border_width="1dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/other_user_file_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="-20dp"
+                    android:layout_toRightOf="@+id/other_user_file_profile_image"
+                    android:background="@drawable/other_user_rounded_corner"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+
+
+                        <ImageView
+                            android:id="@+id/other_user_doc_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/extra_small_margin_size"
+                            android:layout_marginTop="@dimen/extra_small_margin_size"
+
+                            />
+
+                        <com.melodygram.emojicon.EmojiconTextView
+                            android:id="@+id/other_user_file_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/extra_small_margin_size"
+                            android:layout_marginTop="@dimen/extra_small_margin_size"
+                            android:layout_toRightOf="@+id/other_user_doc_image"
+                            android:autoLink="web"
+                            android:linksClickable="true"
+
+                            android:longClickable="false"
+                            android:maxWidth="@dimen/pic_max_width"
+                            android:minHeight="30dp"
+                            android:minWidth="100dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/chating_text_size" />
+
+                        <RelativeLayout
+                            android:id="@+id/other_user_file_progress_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/extra_small_margin_size"
+                            android:layout_toRightOf="@+id/other_user_file_text">
+
+                            <ProgressBar
+                                android:id="@+id/other_user_file_progressbar"
+                                android:layout_width="52dip"
+                                android:layout_height="52dip"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true" />
+
+                            <TextView
+                                android:id="@+id/other_user_percentage_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="0%"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/small_text_size" />
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/other_user_file_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/other_user_file_text"
+                            android:layout_below="@+id/other_user_file_text"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="@dimen/small_margin_size"
+
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:text="10:00 AM"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/small_text_size" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/other_user_file_profile_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="-20dp"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_profile_pic"
+                    app:civ_border_color="@color/chat_user_pic_border"
+                    app:civ_border_width="1dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dummy_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/chat_list_top"></RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/chat_item_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/dummy_view"
+        android:layout_alignTop="@+id/chat_list_top"
+        android:background="@color/semi_transparent_gray"
+        android:visibility="gone">
+
+
+    </RelativeLayout>
+</FrameLayout>

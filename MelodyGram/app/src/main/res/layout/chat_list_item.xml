@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/app_color">
+
+        <LinearLayout
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/small_padding_size">
+
+            <ImageView
+                android:id="@+id/delete_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/delete_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delete_icon"
+                android:layout_marginTop="@dimen/extra_small_padding_size"
+                android:text="@string/delete"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/locate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/small_padding_size">
+
+            <ImageView
+                android:id="@+id/locate_top_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/locate_on_top_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locate_top_id"
+                android:layout_marginTop="@dimen/extra_small_padding_size"
+                android:text="@string/locate_top"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="@dimen/small_margin_size"
+
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/frontTransId"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/friendProfileDetailsParrentId"
+            android:layout_width="wrap_content"
+            android:layout_height="69dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/timeParentId"
+            android:layout_toRightOf="@+id/frontTransId"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:id="@+id/friendProfileDetailsId"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <com.melodygram.emojicon.EmojiconTextView
+                    android:id="@+id/friendNameId"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="friend Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/medium_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/friendProfileDetailsId"
+                android:layout_marginTop="2dp">
+
+                <com.melodygram.emojicon.EmojiconTextView
+                    android:id="@+id/friendLastChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Message"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/medium_text_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/timeParentId"
+            android:layout_width="wrap_content"
+            android:layout_height="69dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/small_margin_size"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:id="@+id/msg_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp">
+
+                <TextView
+                    android:id="@+id/user_msg_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11.00 am"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pic_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="@android:color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/user_pic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin_size"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile_pic"
+            app:civ_border_color="@color/pic_border_color"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:id="@+id/badge_count"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/user_pic"
+            android:layout_marginLeft="-10dp"
+            android:layout_toRightOf="@+id/user_pic"
+            android:background="@drawable/badge_circle"
+            android:gravity="center"
+            android:text="12"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/small_text_size" />
+
+    </RelativeLayout>
+</RelativeLayout>

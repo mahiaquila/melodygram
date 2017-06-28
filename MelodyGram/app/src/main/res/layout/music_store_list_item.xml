@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/track_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_margin_size"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile_pic"
+            app:civ_border_color="@android:color/transparent"
+            app:civ_border_width="1dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/extra_small_margin_size"
+            android:layout_toLeftOf="@+id/download_music"
+            android:layout_toRightOf="@+id/track_pic"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/music_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/medium_text_size" />
+
+            <TextView
+                android:id="@+id/total_tracks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/music_title"
+
+                android:layout_marginTop="@dimen/medium_margin_size"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/free_paid_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/music_title"
+
+                android:layout_marginLeft="@dimen/small_margin_size"
+                android:layout_marginTop="@dimen/medium_margin_size"
+
+                android:layout_toRightOf="@+id/total_tracks"
+                android:textColor="@color/app_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/download_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp">
+
+            <ProgressBar
+                android:id="@+id/download_progress"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_progress_updatevalue"
+                android:layout_width="wrap_content"
+                android:textColor="@color/app_color"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/download_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/download_music" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/header_layout" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin_size">
+
+        <ImageView
+            android:id="@+id/selected_pic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/chat_pic_height"
+            android:layout_gravity="center"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/remove_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="@dimen/extra_small_margin_size"
+            android:layout_marginTop="@dimen/extra_small_margin_size"
+            android:src="@drawable/image_delete_icon" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/pic_description"
+        android:layout_width="match_parent"
+        android:maxLines="3"
+        android:layout_marginRight="@dimen/medium_margin_size"
+        android:layout_marginLeft="@dimen/medium_margin_size"
+        android:background="@null"
+        android:textSize="@dimen/medium_text_size"
+        android:layout_marginTop="@dimen/small_margin_size"
+        android:hint="@string/description"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/small_margin_size"
+        android:layout_marginRight="@dimen/small_margin_size"
+        android:layout_marginTop="@dimen/small_margin_size"
+        android:background="@color/light_app_color"></View>
+
+    <GridView
+        android:id="@+id/image_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerParent"
+        android:layout_marginTop="@dimen/extra_small_padding_size"
+        android:horizontalSpacing="2dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dp"
+
+        ></GridView>
+
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/extra_large_margin_size"
+        android:src="@drawable/logo"></ImageView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin_size"
+        android:src="@drawable/melodygram_name"></ImageView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/about_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/large_margin_size"
+        android:visibility="gone"
+       >
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/small_margin_size"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/large_text_size" />
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/version"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/small_margin_size"
+            android:gravity="center"
+            android:text="@string/year"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/large_text_size"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_privacy_policy"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:text="@string/privacy_policy"
+        android:layout_height="30dp" />
+</LinearLayout>
