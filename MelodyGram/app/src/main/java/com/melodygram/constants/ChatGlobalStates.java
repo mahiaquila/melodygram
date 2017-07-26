@@ -27,9 +27,9 @@ public class ChatGlobalStates {
 	public static ArrayList<ChatMessageModel> chatListItemSelected = null;
 	public static ArrayList<ChatMessageModel> chatItemSelectedMulti = null;
 	public static ArrayList<FriendsModel> selectedFriends = null;
-	public static String bucketName = "morechat";
-	public static String myAWSUserName = "AKIAI5FT7IOIYMB7NY6Q";
-	public static String myAWSKey = "PF+30MbPDL8CxuIz/cjVCtWAXC/M4SerEmx6T/41";
+	public static String bucketName = "xxxxx";
+	public static String myAWSUserName = "xxxx";
+	public static String myAWSKey = "xxx";
 	public static LinkedHashMap<String, String> mediaPathSelected = new LinkedHashMap<String, String>();
 	public static LinkedHashMap<String, UploadDownloadViewsBean> mediasOnProcess = new LinkedHashMap<>();
 	public static LinkedHashMap<String, ChatMessageAdapter.ViewHolder> mediasUploadOnProcess = new LinkedHashMap<>();
